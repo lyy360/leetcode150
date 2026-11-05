@@ -1,0 +1,103 @@
+.md {
+  font-size: 28px;
+  color: #374151;
+  line-height: 1.7;
+
+  .md-h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #24292f;
+    margin: 28px 0 14px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .md-h3 {
+    font-size: 29px;
+    font-weight: 600;
+    color: #24292f;
+    margin: 24px 0 10px;
+  }
+
+  .md-p {
+    margin: 12px 0;
+    word-break: break-all;
+  }
+
+  .md-b {
+    font-weight: 700;
+    color: #24292f;
+  }
+
+  .md-quote {
+    border-left: 6px solid #c7d2fe;
+    background: #eef2ff;
+    border-radius: 0 12px 12px 0;
+    padding: 16px 20px;
+    margin: 16px 0;
+    color: #4338ca;
+  }
+
+  .md-list {
+    margin: 10px 0;
+  }
+
+  .md-li {
+    display: flex;
+    margin: 8px 0;
+
+    .md-dot {
+      flex-shrink: 0;
+      width: 44px;
+      color: #4c6ef5;
+      font-weight: 600;
+    }
+
+    .md-li-text {
+      flex: 1;
+      word-break: break-all;
+    }
+  }
+
+  .md-codeblock {
+    margin: 18px 0;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #0d1117;
+
+    .md-codebar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      background: #161b22;
+
+      .md-codelang {
+        font-size: 22px;
+        color: #8b949e;
+      }
+
+      .md-copybtn {
+        font-size: 22px;
+        color: #79c0ff;
+        padding: 4px 18px;
+      }
+    }
+
+    .md-codescroll {
+      width: 100%;
+    }
+
+    .md-codepre {
+      display: block;
+      padding: 20px 24px;
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+      font-size: 24px;
+      line-height: 1.6;
+      color: #c9d1d9;
+      white-space: pre;
+    }
+  }
+}

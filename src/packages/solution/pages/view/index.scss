@@ -1,0 +1,147 @@
+.sol {
+  padding: 24px 24px 60px;
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  &.empty {
+    text-align: center;
+    color: #999;
+    padding-top: 120px;
+  }
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 24px;
+}
+
+.head {
+  .head-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .title {
+      font-size: 36px;
+      font-weight: 700;
+      color: #24292f;
+      flex: 1;
+    }
+
+    .diff {
+      flex-shrink: 0;
+      font-size: 22px;
+      padding: 6px 14px;
+      border-radius: 8px;
+
+      &.easy {
+        color: #16a34a;
+        background: #dcfce7;
+      }
+
+      &.medium {
+        color: #d97706;
+        background: #fef3c7;
+      }
+
+      &.hard {
+        color: #dc2626;
+        background: #fee2e2;
+      }
+    }
+  }
+
+  .tags {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+
+    .tag {
+      font-size: 22px;
+      color: #4c6ef5;
+      background: #e0e7ff;
+      padding: 6px 16px;
+      border-radius: 8px;
+
+      &.gray {
+        color: #666;
+        background: #f2f3f5;
+      }
+    }
+  }
+}
+
+.sec-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f2f3f5;
+}
+
+.sec-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #24292f;
+}
+
+.copy-all {
+  font-size: 24px;
+  color: #4c6ef5;
+  padding: 8px 24px;
+  background: #eef2ff;
+  border-radius: 10px;
+
+  &.ok {
+    color: #16a34a;
+    background: #f0fdf4;
+  }
+}
+
+.code-card {
+  padding: 0;
+
+  .sec-head {
+    padding: 24px 30px;
+    margin-bottom: 0;
+    border-bottom: 1px solid #f2f3f5;
+  }
+
+  .md {
+    padding: 0 20px 20px;
+  }
+}
+
+.missing {
+  display: block;
+  text-align: center;
+  color: #999;
+  font-size: 28px;
+  padding: 40px 0;
+}
+
+.link-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 0;
+  border-bottom: 1px solid #f2f3f5;
+  margin-top: 6px;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .link {
+    font-size: 28px;
+    color: #4c6ef5;
+  }
+
+  .link-arrow {
+    font-size: 22px;
+    color: #bbb;
+  }
+}

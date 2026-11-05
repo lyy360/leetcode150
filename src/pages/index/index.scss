@@ -1,0 +1,263 @@
+.page {
+  padding: 24px 24px 40px;
+  min-height: 100vh;
+}
+
+.summary {
+  background: #4c6ef5;
+  border-radius: 20px;
+  padding: 32px;
+  color: #fff;
+  margin-bottom: 24px;
+
+  .summary-num {
+    font-size: 56px;
+    font-weight: 700;
+  }
+
+  .summary-total {
+    font-size: 26px;
+    opacity: 0.85;
+    margin-left: 8px;
+  }
+
+  .summary-bar {
+    margin-top: 20px;
+    height: 12px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.25);
+    overflow: hidden;
+
+    .summary-bar-inner {
+      height: 100%;
+      border-radius: 6px;
+      background: #fff;
+      transition: width 0.3s;
+    }
+  }
+}
+
+// 搜索条：编辑器风格深色输入条（页面焦点元素）
+.search-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1b2030;
+  border-radius: 20px;
+  padding: 20px 20px;
+  margin-bottom: 24px;
+
+  .search-prefix {
+    flex: none;
+    font-family: 'SFMono-Regular', Menlo, Consolas, monospace;
+    font-size: 26px;
+    line-height: 48px;
+    color: #6e7ac2;
+    margin-right: 20px;
+  }
+
+  .search {
+    flex: 1;
+    height: 48px;
+    line-height: 48px;
+    padding: 0;
+    background: transparent;
+    color: #e8eaf2;
+    font-size: 28px;
+  }
+}
+
+// 分段控件：状态筛选
+.seg {
+  display: flex;
+  gap: 8px;
+  background: #eaecf2;
+  border-radius: 20px;
+  padding: 8px;
+  margin-bottom: 24px;
+
+  .seg-item {
+    flex: 1;
+    text-align: center;
+    height: 64px;
+    line-height: 64px;
+    border-radius: 14px;
+    font-size: 26px;
+    color: #667080;
+    transition: background 0.2s, color 0.2s;
+
+    &.active {
+      background: #fff;
+      color: #4c6ef5;
+      font-weight: 600;
+      box-shadow: 0 4px 10px rgba(31, 41, 55, 0.08);
+    }
+  }
+}
+
+// 排序：轻量 tab 切换
+.sort-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 32px;
+
+  .sort-label {
+    font-size: 26px;
+    color: #99a0ae;
+  }
+
+  .sort-tabs {
+    display: flex;
+    gap: 44px;
+    flex: 1;
+  }
+
+  .sort-item {
+    position: relative;
+    padding: 8px 4px;
+    font-size: 28px;
+    color: #667080;
+    transition: color 0.2s;
+
+    &.active {
+      color: #4c6ef5;
+      font-weight: 600;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -4px;
+        width: 32px;
+        height: 6px;
+        border-radius: 3px;
+        background: #4c6ef5;
+      }
+    }
+  }
+}
+
+.group {
+  margin-bottom: 32px;
+
+  .group-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    padding: 0 4px;
+
+    .group-name {
+      font-size: 30px;
+      font-weight: 600;
+      color: #24292f;
+
+      // 难度排序视图下的组名配色
+      &.easy {
+        color: #16a34a;
+      }
+
+      &.medium {
+        color: #d97706;
+      }
+
+      &.hard {
+        color: #dc2626;
+      }
+    }
+
+    .group-count {
+      font-size: 24px;
+      color: #999;
+    }
+  }
+
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-radius: 16px;
+    padding: 26px 24px;
+    margin-bottom: 16px;
+    border-left: 6px solid #dfe3ea;
+
+    &.st-1 {
+      border-left-color: #22c55e;
+    }
+
+    &.st-2 {
+      border-left-color: #4c6ef5;
+    }
+
+    .item-main {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex: 1;
+      overflow: hidden;
+      margin-right: 16px;
+
+      .item-title {
+        font-size: 28px;
+        color: #24292f;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .diff {
+        flex-shrink: 0;
+        font-size: 20px;
+        padding: 4px 12px;
+        border-radius: 8px;
+
+        &.easy {
+          color: #16a34a;
+          background: #dcfce7;
+        }
+
+        &.medium {
+          color: #d97706;
+          background: #fef3c7;
+        }
+
+        &.hard {
+          color: #dc2626;
+          background: #fee2e2;
+        }
+      }
+    }
+
+    .status {
+      flex-shrink: 0;
+      font-size: 24px;
+      padding: 6px 18px;
+      border-radius: 24px;
+
+      &.s0 {
+        color: #999;
+        background: #f2f3f5;
+      }
+
+      &.s1 {
+        color: #16a34a;
+        background: #dcfce7;
+      }
+
+      &.s2 {
+        color: #4c6ef5;
+        background: #e0e7ff;
+      }
+    }
+  }
+}
+
+.empty {
+  text-align: center;
+  color: #999;
+  font-size: 26px;
+  padding: 80px 0;
+}

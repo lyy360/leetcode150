@@ -1,0 +1,16 @@
+{
+  "miniprogramRoot": "./dist",
+  "projectname": "leetcode150",
+  "description": "代码随想录150题刷题工具",
+  "appid": "wx13950a502b07667e",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "enhance": false,
+    "compileHotReLoad": false,
+    "postcss": false,
+    "minified": false,
+    "minifyWXML": true
+  },
+  "compileType": "miniprogram"
+}
